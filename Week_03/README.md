@@ -177,3 +177,34 @@ python 位运算，n&1 检查是否为奇数，n>>=1来除以二
             ans+= [[num]+sub for sub in ans]
         return ans
 
+#169 多数元素
+	1.我的做法：
+		先排序，再遍历，假如出现数量超过一半以上，直接reture
+	2.巧妙的办法：
+		因为出现超过一半以上，所以排序后，中点位置一定是该数
+	def majorityElement(self, nums: List[int]) -> int:
+        nums.sort()
+        return nums[len(nums)//2]
+
+#17 电话号码的字母组合
+	1.回溯法：
+		在主function中设置一个存储电话号码和对英字母的map
+		在helper function中：
+			存入当前数字的位数，把对应的字母分别和上一层的output结合，传入下一层
+
+#51 N皇后
+	1.回溯法：
+	本题需要了解一个核心概念，即皇后的进攻路线是两条对角线和横竖两条线，其余的算法和其他回溯并无太大差异，难点在于实现起来比较麻烦
+	2.大神极简代码：
+		def DFS(queens, xy_dif, xy_sum):
+	        p = len(queens)
+	        if p==n:
+	            result.append(queens)
+	            return None
+	        for q in range(n):
+	            if q not in queens and p-q not in xy_dif and p+q not in xy_sum: 
+	                DFS(queens+[q], xy_dif+[p-q], xy_sum+[p+q])  
+	    result = []
+	    DFS([],[],[])
+	    return [ ["."*i + "Q" + "."*(n-i-1) for i in sol] for sol in result]
+
