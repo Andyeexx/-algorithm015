@@ -1,5 +1,6 @@
 学习笔记
 
+
 python queue源码分析：
 	put(self, item, block=True, timeout=None):  #填入
 		put由helper function完成，原理是使用queue.append(item)， 所以时间复杂度为O(1)
@@ -8,7 +9,7 @@ python queue源码分析：
 
 python priority queue源码分析：
 	python的优先级队列是由heapq来写的，往一个长度为n的优先级队列中插入一个元素时间复杂度是O(logn)。那么把n个元素插入一个空的优先级队列中时间复杂度就为O(nlogn)。如果把n个元素插入一个空的优先级队列中，但是优先级队列的最大长度为k，那么时间复杂度就为O(nlogk)。
-	push为heappush， pop为heappop时间复杂度均为O(logn)
+	push为heappush时间复杂度为O(logn)， pop为heappop时间复杂度为O(logn)
 
 
 #1（简单） 两数之和
