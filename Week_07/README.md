@@ -59,9 +59,11 @@
 			pq.push(unvisited)
 
 #python技巧：
-	dict.setdefault(key, default=None)作用和get类似
+	1.dict.setdefault(key, default=None)作用和get类似
 		假如有对应key，就返回对应的value
 		假如没有，就添加(key,default)在dict里，并且返回这个default value
+	2.set的合并方式： set()|{a}
+		visited | {(i,j)}, 用于dfs传入下一层很好用
 
 #208 实现 Trie (前缀树)
 	1. 字典树的实现，
