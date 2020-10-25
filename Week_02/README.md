@@ -45,6 +45,8 @@ collections.defaultdict()
 collections.OrderedDicit()
 	1.sorted(iterable,key,reverse)，
 		sorted一共有iterable,key,reverse这三个参数。其中iterable表示可以迭代的对象，例如可以是dict.items()、dict.keys()等，key是一个函数，用来选取参与比较的元素，reverse则是用来指定排序是倒序还是顺序，reverse=true则是倒序，reverse=false时则是顺序，默认时reverse=false。采用这种方法可以对字典的value进行排序。注意排序后的返回值是一个list，而原字典中的名值对被转换为了list中的元组。
+		d = {‘banana’:3,’apple’:4,’pear’:1,’orange’:2}
+	通过排序来生成一个有序的字典，有以下几种方式	
 		>from collections import OrderedDic
 		>d={'b':3,'a':4,'c':2,'d':1}
 		# 将d按照key来排序
@@ -281,6 +283,5 @@ python 技巧
 
 #107 二叉树的层次遍历2
 	1. 用BFS就能解决
-
 
 
