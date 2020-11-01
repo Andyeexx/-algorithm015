@@ -118,6 +118,7 @@ python 技巧
 	1.''.join(list) 将list里的内容和并
 	2.[0] * num 创造长度为num的0 list
 	3.ord(letter) 可以返回字母的顺序
+	4.str.split(" ")
 
 
 
